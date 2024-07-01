@@ -32,7 +32,7 @@ HTTP_204_NO_CONTENT = 204
 
 @given('the following products')
 def step_impl(context):
-    """ Delete all Products and load new ones """
+    """ loading the background data  """
     #
     # List all of the products and delete them one by one
     #
