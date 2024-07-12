@@ -104,9 +104,13 @@ class TestProductModel(unittest.TestCase):
     #
     # ADD YOUR TEST CASES HERE
     #
+<<<<<<< HEAD
     ###
     #read a product
     #####
+=======
+    # Test Case to Read a Product
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
 
     def test_read_a_product(self):
         """It should Read a Product"""
@@ -120,9 +124,14 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found_product.name, product.name)
         self.assertEqual(found_product.description, product.description)
         self.assertEqual(found_product.price, product.price)
+<<<<<<< HEAD
     ###
     #update a product 
     ####
+=======
+
+    # update a product
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
 
     def test_update_a_product(self):
         """It should Update a Product"""
@@ -142,10 +151,15 @@ class TestProductModel(unittest.TestCase):
         self.assertIsNotNone(updated_product)
         self.assertEqual(updated_product.id, original_id)
         self.assertEqual(updated_product.description, "testing")
+<<<<<<< HEAD
     
     ###
     #delete a product
     ###
+=======
+
+    # delete a product
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
 
     def test_delete_a_product(self):
         """It should Delete a Product"""
@@ -155,10 +169,16 @@ class TestProductModel(unittest.TestCase):
         # delete the product and make sure it isn't in the database
         product.delete()
         self.assertEqual(len(Product.all()), 0)
+<<<<<<< HEAD
     
     ###
     #list all product 
     ####
+=======
+
+    # list all product '
+
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
     def test_list_all_products(self):
         """It should List all Products in the database"""
         products = Product.all()
@@ -171,9 +191,14 @@ class TestProductModel(unittest.TestCase):
         products = Product.all()
         self.assertEqual(len(products), 5)
 
+<<<<<<< HEAD
     ####
     #find a product by name 
     ####
+=======
+    # find a product by name'
+
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
     def test_find_by_name(self):
         """It should Find a Product by Name"""
         products = ProductFactory.create_batch(5)
@@ -185,10 +210,16 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found.count(), count)
         for product in found:
             self.assertEqual(product.name, name)
+<<<<<<< HEAD
     
     ###
     #find a product by availability
     ###
+=======
+
+    # find a product by availability'
+
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
     def test_find_by_availability(self):
         """It should Find Products by Availability"""
         products = ProductFactory.create_batch(10)
@@ -200,10 +231,15 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found.count(), count)
         for product in found:
             self.assertEqual(product.available, available)
+<<<<<<< HEAD
     
     ###
     #finding product by catagory
     ###
+=======
+
+    # finding product by catagory'
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
 
     def test_find_by_category(self):
         """It should Find Products by Category"""
@@ -215,4 +251,8 @@ class TestProductModel(unittest.TestCase):
         found = Product.find_by_category(category)
         self.assertEqual(found.count(), count)
         for product in found:
+<<<<<<< HEAD
             self.assertEqual(product.category, category)
+=======
+            self.assertEqual(product.category, category)
+>>>>>>> 6c74acdbc112eff7047465e6a6211fce9a5f08b5
